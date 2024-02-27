@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mcts
+Version: 0.0.1
+Summary: Monte Carlo Tree Search package
+Author-email: Patrick McQuay <patrick.mcquay@gmail.com>
+Project-URL: Homepage, https://github.com/SnarkAttack/monte-carlo-tree-search
+Project-URL: Issues, https://github.com/SnarkAttack/monte-carlo-tree-search/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Monte Carlo Tree Search

@@ -15,6 +15,16 @@ class BaseNode():
         self._num_visits = 0
         self._total_reward = 0
 
+    def node_details_str(self):
+        return f"State: {self._state}\n" + \
+               f"Num visits: {self._num_visits}\n" + \
+               f"Num children: {len(self._children)}\n" + \
+               f"Reward: {self.exploitation_value}\n"
+
+    def full_node_details_str(self):
+        return self.node_details_str() + "\n" + \
+               ''.join([str(a)+"\n"+n.node_details_str()+"\n" for (a, n) in self._children.items()])
+
     @property
     def state(self) -> BaseState:
         """
@@ -58,6 +68,10 @@ class BaseNode():
         if self._num_visits == 0:
             return 0
         return self._total_reward / self._num_visits
+    
+    @property
+    def value(self):
+        return self.exploitation_value
     
     @property
     def num_visits(self):

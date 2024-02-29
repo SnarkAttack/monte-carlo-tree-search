@@ -70,5 +70,20 @@ if __name__ == "__main__":
 
     decision_tree = BaseTree(state)
 
-    best_action = decision_tree.select_best_action_iterations(1000)
+    best_action = decision_tree.select_best_action_time(100)
+
+    state = state.take_action(best_action)
+
+    state = state.take_random_action()
+
+    print(state.visualize_board())
+
+    decision_tree = BaseTree(state)
+
+    best_action = decision_tree.select_best_action_time(100)
+    
+    print(decision_tree._root.full_node_details_str())
+
+
+
 

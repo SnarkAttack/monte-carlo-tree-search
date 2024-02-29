@@ -26,6 +26,6 @@ class BaseState(ABC):
     def get_reward(self) -> float:
         raise NotImplementedError()
     
-    def get_random_next_state(self):
+    def take_random_action(self):
         random_action = random.choice(self.get_possible_actions())
         return self.take_action(random_action)
